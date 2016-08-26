@@ -79,7 +79,7 @@ function countRunningModifiers(player)
 	
 	if (armorInventory ~= nil) then
 		if (armorInventory[1] ~= nil and armorInventory[1].valid_for_read) then
-			if (armorInventory[1].has_grid) then
+			if (armorInventory[1].prototype.equipment_grid ~= nil) then
 				local equipmentList = armorInventory[1].grid.equipment
 				for _, equipment in pairs(equipmentList) do
 					if (equipment.movement_bonus > 0) then
