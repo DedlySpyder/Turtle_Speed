@@ -74,13 +74,13 @@ script.on_event("turtle_speed_hotkey", on_hotkey)
 
 --Function to count the number of movement speed modifiers
 function countRunningModifiers(player)
-	local armorInventory = player.get_inventory(defines.inventory.player_armor)
+	local armorInventory = player.get_inventory(defines.inventory.player_armor)[1]
 	local movementSpeedCounter = 0
 	
 	if (armorInventory ~= nil) then
-		if (armorInventory[1] ~= nil and armorInventory[1].valid_for_read) then
-			if (armorInventory[1].prototype.equipment_grid ~= nil) then
-				local equipmentList = armorInventory[1].grid.equipment
+		if (armorInventory ~= nil and armorInventory.valid_for_read) then
+			if (armorInventory.grid ~= nil) then
+				local equipmentList = armorInventory.grid.equipment
 				for _, equipment in pairs(equipmentList) do
 					if (equipment.movement_bonus > 0) then
 						movementSpeedCounter = movementSpeedCounter + 1
