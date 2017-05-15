@@ -59,7 +59,7 @@ function on_hotkey(event)
 	
 	--A modifier of -1 stops the player, while less that -1 will make them move in reverse
 	--This can only occur with modded equipment
-	if (runningModifier < -0.9) then runningModifier = -0.9 end
+	if (runningModifier < -0.75) then runningModifier = -0.75 end
 	
 	--Set the new speed modifier and flip the global bool
 	global.turtle_speed_state[player_index].oldModifier = player.character_running_speed_modifier
