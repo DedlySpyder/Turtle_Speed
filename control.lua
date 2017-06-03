@@ -6,7 +6,7 @@ script.on_configuration_changed(function(data)
 	
 	--Reset modifier and simplify global
 	if data.mod_changes and data.mod_changes["Turtle_Speed"] and data.mod_changes["Turtle_Speed"].old_version then
-		if data.mod_changes["Turtle_Speed"].old_version < "0.1.5" then
+		if data.mod_changes["Turtle_Speed"].old_version < "0.2.0" then
 			for index, data in pairs(global.turtle_speed_state) do
 				if data.state then
 					game.players[index].character_running_speed_modifier = data.oldModifier or 0
