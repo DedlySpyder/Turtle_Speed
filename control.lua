@@ -1,4 +1,4 @@
-debug_mode = true --TODO
+debug_mode = false
 equipment_name_prefix = "turtle-speed-"
 
 script.on_configuration_changed(function(data)
